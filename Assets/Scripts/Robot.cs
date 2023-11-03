@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Robot : MonoBehaviour
 {
+    [SerializeField] GameObject misslePrefab;
     public Animator robot;
 
     [SerializeField] private string robotType;
@@ -54,6 +55,9 @@ public class Robot : MonoBehaviour
 
     private void fire()
     {
+        GameObject missle = Instantiate(misslePrefab);
+        missle.transform.position = missleFireSpot.transform.position;
+        missle.transform.rotation = missleFireSpot.transform.rotation;
         robot.Play("Fire");
     }
 }
