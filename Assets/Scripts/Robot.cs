@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Robot : MonoBehaviour
 {
-    [SerializeField] GameObject misslePrefab;
+    [SerializeField] GameObject missilePrefab;
     public Animator robot;
 
     [SerializeField] private string robotType;
@@ -14,7 +14,7 @@ public class Robot : MonoBehaviour
     public int range;
     public float fireRate;
 
-    public Transform missleFireSpot;
+    public Transform missileFireSpot;
     UnityEngine.AI.NavMeshAgent agent;
 
     private Transform player;
@@ -55,9 +55,9 @@ public class Robot : MonoBehaviour
 
     private void fire()
     {
-        GameObject missle = Instantiate(misslePrefab);
-        missle.transform.position = missleFireSpot.transform.position;
-        missle.transform.rotation = missleFireSpot.transform.rotation;
+        GameObject missile = Instantiate(missilePrefab);
+        missile.transform.position = missileFireSpot.transform.position;
+        missile.transform.rotation = missileFireSpot.transform.rotation;
         robot.Play("Fire");
     }
 }
