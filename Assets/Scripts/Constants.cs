@@ -12,6 +12,7 @@ public class Constants
     // Gun Types
     public const string Pistol = "Pistol";
     public const string Shotgun = "Shotgun";
+    public const string Laser = "Laser";
     public const string AssaultRifle = "AssaultRifle";
 
     // Robot Types
